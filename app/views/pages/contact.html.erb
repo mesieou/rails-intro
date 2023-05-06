@@ -1,0 +1,18 @@
+<h1>Contact Us</h1>
+
+<h2>Who do you want to contact</h2>
+
+<form action="/contact" method="get">
+  <label for="member">Name:</label>
+  <input id="member" name ="member" type="text" placeholder="Charlie" value= "<%= params[:member] %>" >
+  <input type="submit">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+  <li> <%= member.downcase %></li>
+  <% end %>
+</ul>
+
+<%= link_to "<-Go back home", root_path %>
+<p>We like receiving emails 🤗 📧 </p>
